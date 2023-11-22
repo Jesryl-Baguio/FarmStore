@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=
+  , initial-scale=1.0">
+  <title>Edit Product</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<style>
+    #hero {
+      width: 700px;
+      height: 750px;
+      border-radius: 10px;
+    }
+    .nav-link {
+  margin-right: 50px;
+  color: #fff;
+  font-size: 17px;
+}
+#basket {
+  font-size: 50px;
+}
+input  {
+  height: 50px;
+  width: 220px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  margin-right: 35px;
+
+}
+select {
+  height: 50px;
+  width: 220px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+}
+#submit {
+  border: none;
+  outline: none;
+  background-color: grey;
+  color: white;
+  height: 50px;
+  width: 150px;
+  border-radius: 10px;
+  font-weight: bold;
+  
+}
+#backbutton {
+  margin-left: 180px;
+}
+/* body {
+  background-image: url(https://static.vecteezy.com/system/resources/previews/023/826/258/non_2x/a-fruit-basket-placed-on-a-dark-wooden-table-with-a-dark-background-generative-ai-free-photo.jpg);
+  background-repeat: no-repeat;
+  background-size:cover
+}
+ */
+
+</style>
+
+
+<body>
+  <nav class="navbar navbar-expand-lg bg-dark text-white ">
+    <div class="container-fluid ">
+      <a class="navbar-brand fw-bold text-white fs-3" href="#" style="margin-right: 400px;">FRUIT <span class="text-danger">BASKET</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse mt-3 fw-bold" id="navbarSupportedContent ">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active text-white" aria-current="page" href="/">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active text-white" aria-current="page" href="/products">PRODUCTS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active text-white" aria-current="page" href="#">STORE</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active text-white" aria-current="page" href="#">ABOUT US</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active text-white" aria-current="page" href="#">CONTACT US</a>
+          </li>
+        </ul>
+        <form class="d-flex mb-3" role="search">
+          <input class="form-control me-4" type="search" placeholder="Search" aria-label="Search">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-cart me-3" viewBox="0 0 16 16">
+            <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+          </svg>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+
+  <div class="mt-5 container-fluid bg-dark text-white " id="hero">
+    <div class="container w-75">
+      <!-- <form action="/products" method="POST"> -->
+        <form action="/products/<%= product._id %>?_method=PUT" method="POST">
+        <div class="d-flex ">
+          <h3 class="mt-5 fw-bold">EDIT YOUR <span class="text-danger" id="basket">PRODUCT</span></h3>
+          <a href="/products/<%= product._id %>" class="text-decoration-none mx-auto">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="  mt-5 bi bi-backspace-fill text-white" viewBox="0 0 16 16" id="backbutton">
+              <path d="M15.683 3a2 2 0 0 0-2-2h-7.08a2 2 0 0 0-1.519.698L.241 7.35a1 1 0 0 0 0 1.302l4.843 5.65A2 2 0 0 0 6.603 15h7.08a2 2 0 0 0 2-2V3zM5.829 5.854a.5.5 0 1 1 .707-.708l2.147 2.147 2.146-2.147a.5.5 0 1 1 .707.708L9.39 8l2.146 2.146a.5.5 0 0 1-.707.708L8.683 8.707l-2.147 2.147a.5.5 0 0 1-.707-.708L7.976 8 5.829 5.854z"/>
+            </svg>
+          </a>
+        </div>
+      <p class="mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, sequi reiciendis quod quam provident dolorem non adipisci ipsum dicta quasi veniam vitae, ratione obcaecati eos! </p>
+
+      <form action="/products/<%= product._id %>?_method=PUT" method="POST">
+      <h5>PRODUCT DETAILS</h5>
+      <input type="text" name="name" id="name" placeholder="Product Name">
+      <select name="category" id="category">
+        <% for(let category of categories) {%>
+          <option value="<%= category %>" <%= product.category === category ? 'selected' : '' %>><%= category %></option>
+          <% } %>
+      </select>
+      <h5 class="mt-4">PRODUCT AMOUNT</h5>
+      <input type="number" name="price" step="0.01" id="price" placeholder="Price">
+      <select name="" id="">
+        <option value="Php">PHP</option>
+        <option value="Php">USD</option>
+        <option value="Php">EUR</option>
+      </select>
+      <h5 class="mt-4">DESCRIPTION</h5>
+      <textarea class="rounded-3 text-center" name="" id="" cols="65" rows="6"></textarea>
+      <p>
+        <button class="mt-4 bg-black" id="submit">Submit</button>
+      </p>
+
+    </form>
+    </div>
+    </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
