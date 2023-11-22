@@ -5,7 +5,8 @@ const mongoose = require('mongoose')
 const Product = require('./models/product')
 const methodOverride = require('method-override')
 
-mongoose.connect('mongodb://localhost:27017/farmStore')
+mongoose.connect('mongodb+srv://jesrylbaguio:Jb.1234567@cluster0.rqpztnr.mongodb.net/farmStore')
+// mongoose.connect('mongodb://localhost:27017/farmStore')
 .then(()=>{
     console.log('mongoDB connection open!!')
 })
